@@ -6,7 +6,7 @@
 
   let isVisible = false;
   let title = "";
-  let date = new Date();
+  let date = " ";
 
   function handleSubmit() {
     const newTodo = {
@@ -24,7 +24,6 @@
   }
 </script>
 
-<!-- <Card> -->
 <div class="feedback_form">
   <header>Welcome to Svlt-kit Todo App</header>
   <form on:submit|preventDefault={handleSubmit}>
@@ -32,14 +31,18 @@
       <Button type="button" bind:isVisible>Add A todo</Button>
     </div>
     {#if isVisible}
-      <input type="text" placeholder="Add a todo" class="input" />
-      <input type="date" />
+      <input
+        type="text"
+        placeholder="Add a todo"
+        class="input"
+        bind:value={title}
+      />
+      <input type="date" bind:value={date} />
       <Button type="submit" on:click={handleSubmit}>+ Todo</Button>
     {/if}
   </form>
 </div>
 
-<!-- </Card> -->
 <style>
   header {
     font-size: 22px;
