@@ -1,5 +1,6 @@
 <script>
   import Card from "./Card.svelte";
+  import { TodoStore } from "./../TodoStore";
   export let todo;
 
   function handleDelete(todoId) {
@@ -9,7 +10,7 @@
   }
 </script>
 
-<Card class="item">
+<Card>
   <div class="num-display">
     {todo.date}
   </div>
