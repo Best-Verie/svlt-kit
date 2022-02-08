@@ -1,6 +1,7 @@
 <script>
   import FeedBackForm from "./FeedBackForm.svelte";
   import TodoItem from "./TodoItem.svelte";
+  import TodoList from "./TodoList.svelte";
 </script>
 
 <div class="grid-container">
@@ -8,13 +9,14 @@
     <FeedBackForm />
   </div>
   <div class="right_item">
-    <TodoItem />
+    <TodoList />
   </div>
 </div>
 
 <style>
-  .left-item {
+  .left_item {
     grid-area: left_item;
+    margin-right: 3em;
   }
   .right_item {
     grid-area: right_item;

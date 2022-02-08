@@ -6,13 +6,13 @@
 
   let isVisible = false;
   let title = "";
-  let todoDate = new Date();
+  let date = new Date();
 
   function handleSubmit() {
     const newTodo = {
       id: uuidv4(),
       title: title,
-      todoDate: todoDate,
+      date: date,
     };
 
     TodoStore.update((currentTodo) => {
@@ -20,17 +20,16 @@
     });
 
     title = "";
-    todoDate = "";
+    date = "";
   }
 </script>
 
-<Card>
+<!-- <Card> -->
+<div class="feedback_form">
   <header>Welcome to Svlt-kit Todo App</header>
-
-  <form action="">
+  <form on:submit|preventDefault={handleSubmit}>
     <div class="input-group">
       <Button type="button" bind:isVisible>Add A todo</Button>
-      <!-- <Button type="submit" isDisplayed={bntDisplayed} >+ Todo</Button> -->
     </div>
     {#if isVisible}
       <input type="text" placeholder="Add a todo" class="input" />
@@ -38,8 +37,9 @@
       <Button type="submit" on:click={handleSubmit}>+ Todo</Button>
     {/if}
   </form>
-</Card>
+</div>
 
+<!-- </Card> -->
 <style>
   header {
     font-size: 22px;
@@ -65,5 +65,9 @@
 
   input:focus {
     outline: none;
+  }
+  .feedback_form {
+    margin-top: 5em;
+    margin-left: 3em;
   }
 </style>
