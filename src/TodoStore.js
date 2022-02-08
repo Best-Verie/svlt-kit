@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-export default  TodoStore = writable([
+export  const TodoStore = writable([
     {
     id: 1,
     title: "eating",

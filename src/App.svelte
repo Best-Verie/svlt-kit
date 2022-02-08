@@ -1,7 +1,7 @@
 <script>
-  import FeedBackForm from "./components/FeedBackForm.svelte";
+  import TodoHome from "./components/TodoHome.svelte";
 </script>
 
 <main>
-  <FeedBackForm />
+  <TodoHome />
 </main>

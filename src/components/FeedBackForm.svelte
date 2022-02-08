@@ -2,7 +2,8 @@
   import Card from "./Card.svelte";
   import Button from "./Button.svelte";
 
-  import TodoStore from "./../store/TodoStore";
+  import { TodoStore } from "../TodoStore";
+
   let isVisible = false;
   let title = "";
   let todoDate = new Date();
@@ -19,7 +20,7 @@
     });
 
     title = "";
-    // todoDate = "";
+    todoDate = "";
   }
 </script>
 
