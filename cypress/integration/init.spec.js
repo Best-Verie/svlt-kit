@@ -5,10 +5,7 @@
 // check out the link below and learn how to write your first test:
 // https://on.cypress.io/writing-first-test
 
-describe('Cypress', () => {   
-    it('is working', () => {     
-        expect(true).to.equal(true)   
-    }) 
+describe('Init', () => {   
     
     it('opens the app', () => {   
         cy.visit('http://localhost:8080') 

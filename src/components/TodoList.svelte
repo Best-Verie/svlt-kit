@@ -6,7 +6,7 @@
 
 <div>
   {#each $TodoStore as td (td.id)}
-    <div in:scale out:fade={{ duration: 500 }}>
+    <div in:scale out:fade={{ duration: 500 }} id="todoContainer">
       <TodoItem todo={td} />
     </div>
   {/each}

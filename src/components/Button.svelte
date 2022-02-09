@@ -2,6 +2,7 @@
   export let style = "primary";
   export let type = "button";
   export let isVisible;
+  export let id;
   export function handleClick() {
     console.log(isVisible);
     isVisible = isVisible == true ? false : true;
@@ -10,7 +11,7 @@
   //   export function changeButtonVisibility(){}
 </script>
 
-<button {type} class={style} on:click={handleClick}>
+<button {type} {id} class={style} on:click={handleClick}>
   <slot />
 </button>
 

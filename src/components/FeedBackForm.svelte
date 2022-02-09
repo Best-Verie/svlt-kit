@@ -28,17 +28,20 @@
   <header>Welcome to Svlt-kit Todo App</header>
   <form on:submit|preventDefault={handleSubmit}>
     <div class="input-group">
-      <Button type="button" bind:isVisible>Add A todo</Button>
+      <Button type="button" id="addTodoBtn" bind:isVisible>Add A todo</Button>
     </div>
     {#if isVisible}
       <input
         type="text"
         placeholder="Add a todo"
         class="input"
+        id="addTodoEl"
         bind:value={title}
       />
-      <input type="date" bind:value={date} />
-      <Button type="submit" on:click={handleSubmit}>+ Todo</Button>
+      <input type="date" id="todoDate" bind:value={date} />
+      <Button type="submit" id="todoSubmit" on:click={handleSubmit}
+        >+ Todo</Button
+      >
     {/if}
   </form>
 </div>
